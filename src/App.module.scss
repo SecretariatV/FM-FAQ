@@ -11,7 +11,7 @@
   padding: 0 16px;
 
   &_bg {
-    background-image: url("./background-pattern-mobile.svg");
+    background-image: url("/background-pattern-mobile.svg");
     width: 100%;
     height: 230px;
     position: absolute;
@@ -20,7 +20,7 @@
     left: 0;
 
     @include breakpoint("sm") {
-      background-image: url("./background-pattern-desktop.svg");
+      background-image: url("/background-pattern-desktop.svg");
     }
   }
 
