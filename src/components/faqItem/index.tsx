@@ -14,8 +14,25 @@ interface IProps {
 
 export const FAQItem: FC<IProps> = ({ data, activeId, setActiveId }) => {
   const isActive = activeId === data.id;
+
   const handleClick = () => {
     setActiveId(isActive ? null : data.id);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleClick();
+    } else if (e.key === "ArrowDown") {
+      const nextElement = (
+        e.currentTarget.parentElement?.nextElementSibling as HTMLElement
+      )?.querySelector("button");
+      nextElement?.focus();
+    } else if (e.key === "ArrowUp") {
+      const prevElement = (
+        e.currentTarget.parentElement?.previousElementSibling as HTMLElement
+      )?.querySelector("button");
+      prevElement?.focus();
+    }
   };
 
   return (
@@ -24,6 +41,7 @@ export const FAQItem: FC<IProps> = ({ data, activeId, setActiveId }) => {
         type="button"
         className={S.root_toggle}
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
         aria-expanded={isActive}
         aria-controls={`faq-content-${data.id}`}
         data-testid={`faq-button-${data.id}`}

@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# Frontend Mentor - FAQ Accordion Solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). The challenge helped me improve the accessibility of my website and practice unit testing, following a mobile-first approach.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Frontend Mentor - FAQ Accordion Solution](#frontend-mentor---faq-accordion-solution)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The Challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My Process](#my-process)
+    - [Built With](#built-with)
+    - [What I Learned](#what-i-learned)
+  - [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The Challenge
 
-- Configure the top-level `parserOptions` property like this:
+Users should be able to:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Hide/Show the answer to a question when the question is clicked.
+- Navigate the questions and hide/show answers using keyboard navigation alone.
+- View the optimal layout for the interface depending on their device's screen size.
+- See hover and focus states for all interactive elements on the page.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Screenshot
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![Screenshot of the FAQ accordion component](./screenshot.jpg)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Links
+
+- **Solution URL:** [Github](https://github.com/SecretariatV/FM-FAQ)
+- **Live Site URL:** [Add live site URL here](https://your-live-site-url.com)
+
+## My Process
+
+### Built With
+
+- **Semantic HTML5 markup**
+- **CSS custom properties**
+- **Flexbox**
+- **CSS Grid**
+- **Mobile-first workflow**
+- [**React**](https://reactjs.org/)
+- [**SASS**](https://sass-lang.com/)
+- [**Vitest**](https://vitest.dev/)
+
+### What I Learned
+
+- **Accessibility Enhancements:** Improved the user experience by implementing keyboard navigation, ensuring that users can interact with the FAQ component using just their keyboard.
+- **Test-Driven Development (TDD):** Adopted a TDD mindset by writing unit tests before implementing features. This approach helped ensure code reliability and maintainability.
+- **Unit Testing:** Gained hands-on experience in writing unit tests using `testid` attributes, which facilitated testing of interactive elements.
+
+## Author
+
+- **Website:** [Oliver Boucher](https://ovb-portfolio.vercel.app)
+- **Frontend Mentor:** [@SecretariatV](https://www.frontendmentor.io/profile/SecretariatV)
+- **Twitter:** [@ovb_coder](https://www.twitter.com/ovb_coder)
