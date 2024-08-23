@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - **Solution URL:** [Github](https://github.com/SecretariatV/FM-FAQ)
-- **Live Site URL:** [Live](https://secretariatv.github.io/FM-FAQ/)
+- **Live Site URL:** [Live Site](https://secretariatv.github.io/FM-FAQ/)
 
 ## My Process
 
