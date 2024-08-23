@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+h2 {
+  font-size: 32px;
+
+  @include breakpoint("sm") {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-size: 16px;
+  text-align: left;
+  line-height: 20px;
+}
+
+span {
+  font-size: 14px;
+  line-height: 18px;
+}

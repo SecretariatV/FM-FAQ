@@ -10,9 +10,19 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
   },
+  resolve: {
+    alias: {
+      "@assets": "/src/assets",
+      "@components": "/src/components",
+      "@styles": "/src/styles",
+      "@utils": "/src/utils",
+    },
+  },
   test: {
     globals: true,
     css: true,
     environment: "happy-dom",
+    setupFiles: "./src/setupTest.ts",
   },
+  base: "/FM-FAQ/",
 });

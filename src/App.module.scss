@@ -1,0 +1,54 @@
+@use "@styles/reset" as *;
+@use "@styles/variables" as *;
+@use "@styles/mixin" as *;
+
+.root {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: $bg-color;
+  padding: 0 16px;
+
+  &_bg {
+    background-image: url("./background-pattern-mobile.svg");
+    width: 100%;
+    height: 230px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    @include breakpoint("sm") {
+      background-image: url("./background-pattern-desktop.svg");
+    }
+  }
+
+  &_card {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    height: fit-content;
+    padding: 28px 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+
+    @include breakpoint("sm") {
+      max-width: 600px;
+    }
+
+    &_header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      img {
+        width: 20px;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+}
